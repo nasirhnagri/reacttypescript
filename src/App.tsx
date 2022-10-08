@@ -35,7 +35,7 @@ return(
    <div className='form'>
     <h1>Task 5</h1>
     <form>
-    <input value={inputVlaue} onChange={(e:any) => 
+    <input value={inputVlaue} onChange={(e) => 
         setInputVlaue(e.target.value)
          } placeholder='Enter value'/>
        <button onClick={(e)=> {

@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Gtask from './components/task6/Gender';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import Tates from './components/useState/UseState';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <App/>
+    {/* <Tates/> */}
+    {/* <Gtask/> */}
   </React.StrictMode>
 );
 

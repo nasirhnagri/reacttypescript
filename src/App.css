@@ -6,6 +6,17 @@
   height: 40vmin;
   pointer-events: none;
 }
+.task3{
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+}
+.btnClass{
+  width: 15%;
+  height: 30%;
+  margin-left: 100px;
+  
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

@@ -1,26 +1,60 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+// import SmBtn from './components/buttons/smBtn';
+// import Input from './components/TypeScriptClass/Input';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+interface Gndrprops{
+    male?: string
+    female?: string
 }
 
+enum Gender{
+    MALE = "male",
+    FEMALE = "female"
+}
+const objGnder: Gndrprops = {
+    // male : "",
+    // female:""
+ }
+
+const App =() => {
+    const[inputVlaue, setInputVlaue]=useState<string>("")
+    const[gender, setGender]=useState<Gender>()
+    const[data, setData] = useState(objGnder)
+
+const handleSubmit = (e:any)=> {
+    e.preventDefault()
+    objGnder[inputVlaue as keyof Gndrprops] = gender
+    setData(objGnder);
+    setInputVlaue("")
+// console.log(objGnder)
+
+}
+
+return(
+    <>
+   <div className='form'>
+    <h1>Task 5</h1>
+    <form>
+    <input value={inputVlaue} onChange={(e:any) => 
+        setInputVlaue(e.target.value)
+         } placeholder='Enter value'/>
+       <button onClick={(e)=> {
+        e.preventDefault()
+        setGender(Gender.MALE)} } >MALE</button>
+       <button onClick={(e)=> { 
+        e.preventDefault()
+        setGender(Gender.FEMALE)}} >Female</button>
+       <button onClick={handleSubmit}>Submit</button>
+      
+      {/* {gender} */}
+      </form>
+      
+   </div>
+   {Object.keys(data).map((item)=> (
+        <div>
+            {item}: {data[item as keyof Gndrprops]}
+        </div>
+      ))}
+   </>
+      )}
 export default App;

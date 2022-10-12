@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Gtask from './components/task6/Gender';
+// import Gtask from './components/task6/Gender';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <App/>
-    {/* <Tates/> */}
+    <br/>
     {/* <Gtask/> */}
   </React.StrictMode>
 );
